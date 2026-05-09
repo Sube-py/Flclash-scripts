@@ -428,7 +428,7 @@ function main(config) {
     ChinaDomain: {
       url: "https://testingcf.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/ChinaDomain.list",
       path: "./ruleset/ChinaDomain.list",
-      behavior: "domain",
+      behavior: "classical",
       interval: 86400,
       format: "text",
       type: "http"
@@ -451,6 +451,11 @@ function main(config) {
     }
   };
   config["rules"] = [
+    "DOMAIN,ai.input.im,全球直连",
+    "DOMAIN-KEYWORD,new-api,全球直连",
+    "DOMAIN-KEYWORD,paodingai,全球直连",
+    "DOMAIN-SUFFIX,cheftin.docker.today,全球直连",
+    "DOMAIN-SUFFIX,local,全球直连",
     "RULE-SET,LocalAreaNetwork,全球直连",
     "RULE-SET,UnBan,全球直连",
     "RULE-SET,BanAD,广告拦截",
@@ -463,7 +468,7 @@ function main(config) {
     "RULE-SET,Microsoft,微软服务",
     "RULE-SET,Apple,苹果服务",
     "RULE-SET,Telegram,电报消息",
-    "RULE-SET,AI平台-国外,AI节点", 
+    "RULE-SET,AI平台-国外,AI节点",
     "RULE-SET,Epic,游戏平台",
     "RULE-SET,Origin,游戏平台",
     "RULE-SET,Sony,游戏平台",
